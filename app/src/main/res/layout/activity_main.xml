@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:layout_marginTop="1sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNomeToner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/modelo_do_toner"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/txtCadToner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/borda_campos_cor"
+                android:hint="@string/digite_um_modelo_de_toner"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtNomeModelo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/modelo_da_impressora"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/spnCadModeloImpressora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/spnImpressoras" />
+
+            <TextView
+                android:id="@+id/txtNomeDataEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/data_de_entrada_do_toner"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/txtCadEntrada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/borda_campos_cor"
+                android:hint="@string/digite_uma_data_de_entrada"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtNomeSaida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:layout_marginStart="8sp"
+                android:layout_marginLeft="8sp"
+                android:text="@string/data_de_sa_da_do_toner"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/txtCadSaida"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:background="@drawable/borda_campos_cor"
+                android:hint="@string/digite_uma_data_de_sa_da"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColor="#ffffff"
+                android:textColorHint="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSalvar"
+                style="?android:attr/button"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:background="@drawable/borda_botao_cor"
+                android:hint="@string/salvar"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="30dp"
+            android:layout_marginTop="50dp">
+
+            <TextView
+                android:id="@+id/lblVisualizaToners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/borda_botao_cor"
+                android:hint="@string/visualizar_toners_cadastrados"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

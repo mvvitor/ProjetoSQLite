@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">SQLiteTecia</string>
+    <string name="editar_toner">Editar Toner</string>
+    <string name="entre_com_o_nome_do_toner">entre com o nome do toner</string>
+    <string name="modelo_da_impressora">Modelo da Impressora</string>
+    <string name="digite_uma_data_de_entrada">digite uma data de entrada</string>
+    <string name="digite_uma_data_de_sa_da">digite uma data de saída</string>
+    <string name="alterar">Alterar</string>
+    <string name="data_de_entrada_do_toner">Data de entrada do Toner</string>
+    <string name="digite_um_modelo_de_toner">digite um modelo de toner</string>
+    <string name="modelo_do_toner">Modelo do Toner</string>
+    <string name="data_de_sa_da_do_toner">Data de saída do Toner</string>
+    <string name="salvar">Salvar</string>
+    <string name="visualizar_toners_cadastrados">Visualizar Toners Cadastrados</string>
+    <array name="spnImpressoras">
+            <item>LASER</item>
+            <item>LED</item>
+            <item>JATO DE TINTA</item>
+            <item>MULTIFUNCIONAIS</item>
+            <item>PLOTTER</item>
+            <item>SUBLIMÁTICA</item>
+            <item>DE IMPACTO</item>
+            <item>BULK INK</item>
+            <item>TANQUE DE TINTA</item>
+            <item>TÉRMICA</item>
+        </array>
+    </resources>

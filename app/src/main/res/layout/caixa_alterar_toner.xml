@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="@string/editar_toner"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/txtEditarModeloToner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/borda_campos_cor"
+        android:hint="@string/entre_com_o_nome_do_toner"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp"
+        android:importantForAutofill="no"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/txtEditarModeloImpressoras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/modelo_da_impressora"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <Spinner
+        android:id="@+id/spnCadModeloImpressora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/spnImpressoras" />
+
+    <EditText
+        android:id="@+id/txtEditarDataEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/borda_campos_cor"
+        android:digits="0123456789"
+        android:hint="@string/digite_uma_data_de_entrada"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/txtEditarDataSaida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6dp"
+        android:background="@drawable/borda_campos_cor"
+        android:digits="0123456789"
+        android:hint="@string/digite_uma_data_de_sa_da"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnAlterarToner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/borda_botao_cor"
+        android:hint="@string/alterar"
+        android:textColorHint="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+</LinearLayout>

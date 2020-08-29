@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNomeViewToner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Modelo do Toner"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/txtViewModeloImpressoras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modelo da Impressora"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ffffff"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtViewDataEntrada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data de entrada do Toner"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="#ffffff"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/txtViewDataSaida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Data de saída do Toner"
+            android:textColor="#ffffff"
+            android:textStyle="italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnEditarViewModeloToner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/borda_campos_cor"
+            android:hint="Editar"
+            android:textColorHint="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnExcluirViewModeloToner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/borda_campos_cor"
+            android:hint="Excluir"
+            android:textColorHint="#ffffff"
+            android:textSize="20sp"
+            android:textStyle="italic" />
+    </LinearLayout>
+</LinearLayout>
