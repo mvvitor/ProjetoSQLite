@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSalvar = findViewById(R.id.btnSalvar);
 
         lblVisualizaToners.setOnClickListener(this);
-
+        btnSalvar.setOnClickListener(this);
         //Criando banco de dados
 
         meuBancoDeDados = openOrCreateDatabase(NOME_BANCO_DE_DADOS, MODE_PRIVATE, null);
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void criarTabelaToner() {
         meuBancoDeDados.execSQL(
                 "CREATE TABLE IF NOT EXISTS Toner (" +
-                        "id_toner int PRIMARY KEY AUTOINCREMENT," +
+                        "id_toner integer PRIMARY KEY AUTOINCREMENT," +
                         "nomeToner varchar(10) NOT NULL," +
                         "nomeSpnImpressoras varchar(10) NOT NULL," +
                         "nomeEntrada datetime NOT NULL," +
