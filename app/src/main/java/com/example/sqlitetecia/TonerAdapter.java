@@ -156,7 +156,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
     }
 
     public void recarregarTonerDB() {
-        Cursor cursorToner = meuBancoDeDados.rawQuery("SELECT * FROM Estoque_de_TonerBD", null);
+        Cursor cursorToner = meuBancoDeDados.rawQuery("SELECT * FROM Toner", null);
         if (cursorToner.moveToFirst()) {
             listaToners.clear();
             do {
