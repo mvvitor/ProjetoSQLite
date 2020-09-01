@@ -20,6 +20,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import java.util.List;
 
+
 public class TonerAdapter extends ArrayAdapter<Toner> {
 
     //Variáveis globais
@@ -54,8 +55,9 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
         txtViewDataEntrada.setText(toner.getNomeEntrada());
         txtViewDataSaida.setText(toner.getNomeSaida());
 
-        Button btnEditarViewModeloToner = view.findViewById(R.id.btnEditarViewModeloToner);
+
         Button btnExcluirViewModeloToner = view.findViewById(R.id.btnExcluirViewModeloToner);
+        Button btnEditarViewModeloToner = view.findViewById(R.id.btnEditarViewModeloToner);
 
         btnEditarViewModeloToner.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +75,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
                 builder.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        String sql = "DELETE FROM Toner WHERE id = ?";
+                        String sql = "DELETE FROM Toner WHERE id_toner = ?";
                         meuBancoDeDados.execSQL(sql, new Integer[]{toner.getId_toner()});
                         //chamar o método para atualizar a lista de toners
                         recarregarTonerDB();
@@ -109,7 +111,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
         final EditText txtEditarDataSaida = view.findViewById(R.id.txtEditarDataSaida);
 
         txtEditarModeloToner.setText(toner.getNomeToner());
-        txtEditarDataSaida.setText(String.valueOf(toner.getNomeSaida()));
+        txtEditarDataSaida.setText(toner.getNomeSaida());
 
         final AlertDialog dialog = builder.create();
         dialog.show();
@@ -139,7 +141,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
                     return;
                 }
 
-                String sql = "UPDATE Toner SET nomeToner = ?, nomeSpnImpressoras = ?, nomeEntrada = ?, nomeSaida = ? WHERE id = ?";
+                String sql = "UPDATE Toner SET nomeToner = ?, nomeSpnImpressoras = ?, nomeEntrada = ?, nomeSaida = ? WHERE id_toner = ?";
                 meuBancoDeDados.execSQL(sql,
                         new String[]{nomeToner, nomeSpnImpressoras, nomeEntrada, nomeSaida, String.valueOf(toner.getId_toner())});
                 Toast.makeText(mCtx, "Toner alterado com sucesso!!!", Toast.LENGTH_LONG).show();
@@ -154,7 +156,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
     }
 
     public void recarregarTonerDB() {
-        Cursor cursorToner = meuBancoDeDados.rawQuery("SELECT * FROM Toner", null);
+        Cursor cursorToner = meuBancoDeDados.rawQuery("SELECT * FROM Estoque_de_TonerBD", null);
         if (cursorToner.moveToFirst()) {
             listaToners.clear();
             do {
@@ -171,6 +173,4 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
         notifyDataSetChanged();
     }
 }
-
-
 

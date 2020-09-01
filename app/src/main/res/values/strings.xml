@@ -12,16 +12,12 @@
     <string name="data_de_sa_da_do_toner">Data de saída do Toner</string>
     <string name="salvar">Salvar</string>
     <string name="visualizar_toners_cadastrados">Visualizar Toners Cadastrados</string>
+    <string name="logo">logo</string>
     <array name="spnImpressoras">
-            <item>LASER</item>
-            <item>LED</item>
-            <item>JATO DE TINTA</item>
-            <item>MULTIFUNCIONAIS</item>
-            <item>PLOTTER</item>
-            <item>SUBLIMÁTICA</item>
-            <item>DE IMPACTO</item>
-            <item>BULK INK</item>
-            <item>TANQUE DE TINTA</item>
-            <item>TÉRMICA</item>
-        </array>
-    </resources>
+        <item>M4080FX</item>
+        <item>M5360RX</item>
+        <item>C4062FX</item>
+        <item>M4020ND</item>
+        <item>K4250RX</item>
+    </array>
+</resources>
