@@ -28,6 +28,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
     int listaLayoutRes;
     List<Toner> listaToners;
     SQLiteDatabase meuBancoDeDados;
+    TextView decricaoModeloToner,descricaoModeloImpressora,descricaoDataEntrada,descricaoDataSaida;
 
     public TonerAdapter(@NonNull Context mCtx, int listaLayoutRes, List<Toner> listaToners, SQLiteDatabase meuBancoDeDados) {
         super(mCtx, listaLayoutRes, listaToners);
@@ -40,10 +41,16 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
     //Inflar layout com o modelo e suas ações
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
+
         LayoutInflater inflater = LayoutInflater.from(mCtx);
         View view = inflater.inflate(listaLayoutRes, null);
 
         final Toner toner = listaToners.get(position);
+
+        decricaoModeloToner = view.findViewById(R.id.decricaoModeloToner);
+        descricaoModeloImpressora = view.findViewById(R.id.descricaoModeloImpressora);
+        descricaoDataEntrada = view.findViewById(R.id.descricaoDataEntrada);
+        descricaoDataSaida = view.findViewById(R.id.descricaoDataSaida);
 
         TextView txtNomeViewToner = view.findViewById(R.id.txtNomeViewToner);
         TextView txtViewModeloImpressoras = view.findViewById(R.id.txtViewModeloImpressoras);
@@ -90,6 +97,7 @@ public class TonerAdapter extends ArrayAdapter<Toner> {
                 });
                 AlertDialog dialog = builder.create();
                 dialog.show();
+
             }
         });
 

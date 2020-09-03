@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF5722"
+    android:background="@drawable/fundo"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -61,6 +61,7 @@
                 android:textStyle="italic" />
 
             <Spinner
+                android:background="@drawable/borda_campos_cor"
                 android:id="@+id/spnCadModeloImpressora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
